@@ -1,10 +1,11 @@
 DATA_CODE = """
-param num_pivots: 2;
+data;
+param num_pivots := 2;
 param coverage_cost := 0.5;
 param initial_cost := 12000;
-param parcel_area: 1458888.8282936495;
+param parcel_area := 1458888.8282936495;
 param max_length := 800;
-param SIZES cost :=
+param: SIZES: cost :=
 0 0
 37 8036
 39 8667
@@ -13,10 +14,10 @@ param SIZES cost :=
 52 10737.5
 54 11750;
 
-set EXTRA_SIZES 0 37 39;
+set EXTRA_SIZES := 0 37 39;
 
-set POLY: P1;
-set LINES_POLY [P1] L11 L12 L13 L14 L15 L16 L17 L18;
+set POLY := P1;
+set LINES_POLY [P1] := L11 L12 L13 L14 L15 L16 L17 L18;
 
 param: x1_lines y1_lines x2_lines y2_lines:=
 P1 L11 603.87 1818.61 1133.98 1559.28

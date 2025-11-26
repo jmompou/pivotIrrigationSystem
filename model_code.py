@@ -1,14 +1,14 @@
 MODEL_CODE = """
 #--PARAMETERS AND SETS--
 param num_pivots;
-set PIVOTS {1..num_pivots};
+set PIVOTS = 1..num_pivots;
 set SIZES;
 set EXTRA_SIZES within SIZES;
 set POLY;
 set LINES_POLY {POLY};
 #set of polygons that form the surface
 set SEGMENTS;
-param x1_lines {i in POLY, j in LINES_POLY[i]);
+param x1_lines {i in POLY, j in LINES_POLY[i]};
 param y1_lines {i in POLY, j in LINES_POLY[i]};
 param x2_lines {i in POLY, j in LINES_POLY[i]};
 param y2_lines {i in POLY, j in LINES_POLY[i]};

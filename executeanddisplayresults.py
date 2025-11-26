@@ -1,3 +1,7 @@
+from amplpy import AMPL
+from model_code import MODEL_CODE
+from data_code import DATA_CODE
+
 def execute_and_display_results():
     # Inicializar la instancia de AMPL
     ampl = AMPL()
@@ -67,8 +71,11 @@ def execute_and_display_results():
             continue
 
     print("\n--- Tiempos de Ejecución ---")
-    print(f"Tiempo de AMPL (ampl_time): {ampl.getValue('ampl_time'):.4f} segundos")
-    print(f"Tiempo de solución (total_solve_time): {ampl.getValue('total_solve_time'):.4f} segundos")
+    try:
+        print(f"Tiempo de AMPL (ampl_time): {ampl.getValue('ampl_time'):.4f} segundos")
+        print(f"Tiempo de solución (total_solve_time): {ampl.getValue('total_solve_time'):.4f} segundos")
+    except Exception as e:
+        print(f"No se pudieron obtener los tiempos de ejecución: {e}")
 
 # Ejecutar el proyecto completo
-# execute_and_display_results()
+execute_and_display_results()
