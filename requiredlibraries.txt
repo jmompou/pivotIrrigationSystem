@@ -1,0 +1,5 @@
+# Install amplpy 
+# !pip install amplpy
+
+from amplpy import AMPL
+import math
