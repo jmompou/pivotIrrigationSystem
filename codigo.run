@@ -1,0 +1,26 @@
+reset;
+
+model codigo.mod;
+data codigo.dat;
+option solver gurobi;
+option gurobi_options 'NonConvex=2';
+
+solve;
+
+for{i in PIVOTS} {
+	if exist[i]=1 then {
+		print "There is a pivot in the position (",x[i],",",y[i],") of length ",length[i],".";
+		for{j in SIZES} {
+			if hasSize[i,j]=1 then 
+				print "The pivot has ",numSec[i,j]," sections of length ",j,".";
+		};
+		for{k in EXTRA_SIZES} {
+			if extraSize[i,k]=1 then 
+				print "In addition, it has an extra section of length ",k,".";};
+	
+	};
+}
+print "";
+print "";
+display _ampl_time;
+display _total_solve_time;
