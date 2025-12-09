@@ -1,12 +1,12 @@
 # 🌾 Irrigation Optimization Project (MINLP)
 
-This repository contains the Python implementation of a complex **Mixed-Integer Nonlinear Programming (MINLP)** model. The project’s core function is to find the optimal arrangement and size of center pivot irrigation systems on irregularly shaped farm parcels to **minimize total cost** (installation + coverage) while **maximizing the irrigated area**.
+This repository contains the Python and AMPL implementations of a complex **Mixed-Integer Nonlinear Programming (MINLP)** model. The project’s core function is to find the optimal arrangement and size of center pivot irrigation systems on irregularly shaped farm parcels to **minimize total cost** (installation + coverage) while **maximizing the irrigated area**.
 
 ---
 
 ## 🏛️ Authorship and Project Origin
 
-This work is a **translation and adaptation into Python** of a university project originally developed using the **AMPL modeling language**.
+This work is a **translation and adaptation into Python** of a university project originally developed using the **AMPL modeling language**, but the original AMPL code is hereby provided too.
 
 | Role | Name |
 | :--- | :--- |
